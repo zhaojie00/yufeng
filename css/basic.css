@@ -1,0 +1,41 @@
+/*基础样式*/
+html, body, div, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, textarea, iframe, table, th, td {
+	margin: 0;
+	padding: 0;
+}
+body{ font-family:'微软雅黑','Arial' !important; _font-family:'微软雅黑' !important;color: #666;font-size: 16px;}
+/*A标签下划线 虚线边框去除  img图片边框    列表黑色圆点*/
+a{ text-decoration:none !important; outline:none !important; color: #666666;}
+a:hover{
+	color: #edb323;
+}
+img{ border:0 none;}
+ul{ list-style:none;}
+
+i,em{ font-style:normal;}/*倾斜标签*/
+
+/*浮动 双倍边距*/
+
+.clear{ clear:both;}
+
+/*浮动塌陷  定位兼容 clearfix跟pc_overflow作用一样*/
+.w1359{ width:1359px; margin:0 auto; zoom:1; background-color: rgba(0,0,0,0.6); padding-top: 155px; border-left:1px solid #0F7EA2; border-right:1px solid #0F7EA2;}
+.w1359:before{display: table;line-height: 0;content:"";}
+.w1359:after{display: table;line-height: 0;content:"";clear:both;}
+
+.w1200{ width:1200px; margin:0 auto; zoom:1;}
+.w1200:before{display: table;line-height: 0;content:"";}
+.w1200:after{display: table;line-height: 0;content:"";clear:both;}
+
+.clearfix{zoom:1;}
+.clearfix:before,.clearfix:after{display: table;line-height: 0;content:"";}
+.clearfix:after{clear:both;}
+
+input, button, textarea, select{
+	border:0px;
+	outline: none;
+}
+button {
+	cursor: pointer;
+}
+.clear{clear: both;}

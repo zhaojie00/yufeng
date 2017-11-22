@@ -106,9 +106,53 @@ $(function(){
 	})
 
 	/*许可证轮换*/
-	$('.rit-1').click(function(){
-		//console.log($('#ul7 li:eq(1) img').attr('src'));
-		
+	$(function(){
+		var oUl7 = $('#ul7');
+		var oLi7 = $('#ul7 li');
+		var long = oLi7.length;
+		console.log(long);
+		var arrClass = ['zuo','you','zhong'];
+		for(var i=0; i<long; i++){
+			if(i<1){
+				oLi7.eq(i).addClass('zuo');
+			}else if(i>1){
+				oLi7.eq(i).addClass('zhong');
+			}else{
+				oLi7.eq(i).addClass('you');
+			}
+		}
+		var j=0;
+		$('.rit-1').click(function(){
+			j<3?j++:j=0;
+			arrClass.push(arrClass[0]);
+			 arrClass.shift();
+			console.log(arrClass);
+			for(var i=0; i<long; i++){				
+				if(i<1){
+						oLi7.eq(i).removeClass().addClass(arrClass[i+1]);
+				}else if(i>1){
+					oLi7.eq(i).removeClass().addClass(arrClass[0]);
+				}else{
+					oLi7.eq(i).removeClass().addClass(arrClass[i+1]);
+				}				
+			}
+		})
+		$('.lef-1').click(function(){			
+			j<3?j++:j=0;
+			arrClass.push(arrClass[0]);
+			 arrClass.shift();
+			console.log(arrClass);
+			for(var i=0; i<long; i++){				
+			if(i<1){
+					oLi7.eq(i).removeClass().addClass(arrClass[i+1]);
+
+				}else if(i>1){
+					oLi7.eq(i).removeClass().addClass(arrClass[0]);
+				}else{
+					oLi7.eq(i).removeClass().addClass(arrClass[i+1]);
+				}				
+			}
+		})
 	})
 	/*连续滚动*/
 	$(function(){
@@ -124,7 +168,7 @@ $(function(){
 		// 			left:-speed +'px',
 		// 		})
 		// 		}else{				
-		// 			$('.ul8').css('left',0+'px');sssss
+		// 			$('.ul8').css('left',0+'px');
 		// 			speed = 0;
 		// 		}
 		// })
@@ -154,7 +198,7 @@ $(function(){
 		})
 
 	})
-	/*最后一个滚动条*/
+	/*最后一个滚动*/
 	$(function(){
 		var long = $('#ul9 li').length;
 		$('#ul9').attr({width:long*$('#ul9 li').width()+long*68 +'px',});
@@ -182,6 +226,33 @@ $(function(){
 		})
 
 	})
-
+	/*留言框*/
+	$(function(){
+		var a = 0;
+		$('#liu input,textarea').each(function(){			
+			$(this).click(function(){
+				$(this).focus().val('');
+				$(this).blur(function(){
+					if($(this).val()==''){
+						$(this).siblings('p').show();
+						a++;
+					}else{
+						a = 0;
+					}					
+				})
+			})
+		})
+		$('.sub').click(function(){
+			if(a!=0){
+				console.log('请完善资料!!!');
+			}
+		})
+		$('.res').click(function(){
+				$('#liu input,textarea').each(function(){
+				$(this).val('');
+				$(this).siblings('p').hide();
+			})
+		})
+	})
 
 })/*E $fun*/

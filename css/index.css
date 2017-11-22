@@ -41,7 +41,6 @@
 	margin:0 auto;
 }
 .nav-foot{
-	display: none;
 	position: fixed;
 	z-index: 99;
 	bottom: 0;
@@ -639,18 +638,30 @@ body{
 	float: left;
 	width: 150px;
 	height: 210px;
+	transition: all 0.5s ease;
 }
-#ul7 li.li-1{
-	left: 68px;
+#ul7 li.zhong img{
+	width:194px;
+	height:280px;
+
+}
+#ul7 li img{
+	width: 150px;
+	height: 210px;
+}
+#ul7 li.zuo{
+	left: 70px;
 	top: 50px;
 }
-#ul7 li.li-2{
+#ul7 li.zhong{
 	z-index: 6;
-	left: 198px;
+	width:150px;
+	height:210px;
+	left: 180px;
 	top: 20px;
 }
-#ul7 li.li-3{
-	right: 48px;
+#ul7 li.you{
+	left: 340px;
 	top: 50px;
 }
 .ul5 .li3{
@@ -985,12 +996,39 @@ body{
 
 }
 .name,.submit{
+	position: relative;
 	display: inline-block;
 	width: 250px;
 	height: 60px;
 	margin-right: 24px;
 }
+.name p,.phone p,.yan p{
+	display: none;
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:110px;
+	height:14px;
+	color:#EDB323;
+	font-size:12px;
+	padding-left:5px;
+}
+.name p i,.phone p i,.yan p i{
+	display: block;
+	float: left;
+	width:14px;
+	height:14px;
+	color:#5136f5;
+	margin-right: 5px;
+	margin-top:2px;
+	text-align: center;
+	line-height: 14px;
+	border-radius:50%;
+	background: #EDB323;
+}
+
 .phone,.reset{
+	position: relative;
 	display: inline-block;
 	width: 250px;
 	height: 60px;
@@ -1002,9 +1040,10 @@ body{
 	border-radius: 10px;
 	text-indent: 24px;
 	color: #fff;
-	background: rgba(0,0,0,.3);
+	background: rgba(255,255,255,.3);
 }
 .yan{
+	position: relative;
 	width: 530px;
 	height: 160px;
 	margin:12px 0;
@@ -1017,8 +1056,19 @@ body{
 	border-radius: 10px;
 	text-indent: 24px;
 	color: #fff;
-	background: rgba(0,0,0,.3);
+	background: rgba(255,255,255,.3);
 
+}
+.submit input,.reset input{
+	text-align: center;
+	text-indent: 0;
+	transition: all 0.5s ease;
+}
+.submit:hover input{
+	background: #EDB323;
+}
+.reset:hover input{
+	background: #EDB323;
 }
 
 /*联系我们*/
@@ -1118,10 +1168,28 @@ body{
 	margin: 0 15px;
 }
 .footer-ad .wei{
+	position: relative;
 	float: right;
 	width: 100px;
 	height: 30px;
 	line-height: 30px;
+}
+.wei b{
+	opacity: 0;
+	display: block;
+	position: absolute;
+	right: 0px;
+	top: -26px;
+	width: 72px;
+	height: 73px;
+	transition: all 0.5s ease;
+}
+.wei b img{
+	border-radius: 5px;
+}
+.wei:hover b{
+	opacity: 1;
+	right: 110px;
 }
 .wei span{
 	display: inline-block;

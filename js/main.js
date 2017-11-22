@@ -45,7 +45,6 @@ $(function(){
 	})
 	/*右侧侧边栏*/
 	$('#ce').click(function(){
-		console.log(parseInt($('.ce-box').css('right')));
 		if(parseInt($('.ce-box').css('right'))==0){
 			$('.ce-ll').css('background-position','-30px -396px');
 			$('.ce-box').animate({'right':-160+'px',})
